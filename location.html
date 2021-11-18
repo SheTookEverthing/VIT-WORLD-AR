@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+</head>
+
+<body style="margin: 0; overflow: hidden;">
+    <a-scene 
+        embedded loading-screen="enabled: false;"
+        arjs="sourceType: webcam; debugUIEnabled: false;">
+
+            <a-image 
+                src="assets/drip.png" 
+                look-at="[gps-camera]" 
+                scale="1 1 1"
+                gps-entity-place="latitude: 43.001635; longitude: -78.794679;">
+            </a-image>
+
+            <a-image 
+                src="assets/kong.png" 
+                look-at="[gps-camera]" 
+                scale="1 1 1"
+                gps-entity-place="latitude: 43.000443; longitude: -78.789226;">
+            </a-image>
+
+            <a-image   
+                src="assets/stinky.png" 
+                look-at="[gps-camera]" 
+                scale="1 1 1"
+                gps-entity-place="latitude: 43.000114; longitude: -78.779523;">
+            </a-image>
+
+        <a-camera gps-camera rotation-reader></a-camera>
+    </a-scene>
+</body>
+
+</html>
